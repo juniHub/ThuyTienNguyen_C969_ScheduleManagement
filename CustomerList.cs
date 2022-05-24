@@ -18,7 +18,13 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             Main = main;
         }
 
+
         private void customerDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void customDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
@@ -104,6 +110,21 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
                     throw new ApplicationException("A customer must have a phone number.");
                 }
 
+                if (!Int32.TryParse(zipTextBox.Text, out _)){
+
+                    throw new ApplicationException("Zipcode must be a number");
+
+                }
+
+                if (!Int32.TryParse(phoneTextBox.Text, out _))
+                {
+
+                    throw new ApplicationException("Phone must be a number");
+
+                }
+
+
+
                 string customerName = nameTextBox.Text;
                 string address1 = addressTextBox.Text;
                 string address2 = address2TextBox.Text;
@@ -129,6 +150,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
                 }
 
                 ToggleActiveInputs(false);
+
                 customerDataGridView.Rows.Cast<DataGridViewRow>().Where(row => Convert.ToInt32(row.Cells[0].Value) == customerID).Single().Selected = true;
             }
             catch (ApplicationException error)
@@ -295,10 +317,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             customerDataGridView.Enabled = !active;
         }
 
-        private void customDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+     
 
         private void customDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {

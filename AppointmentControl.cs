@@ -27,13 +27,22 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
      
         private void saveButton_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 DateTime now = DateTime.Now;
                 TimeSpan businessStart = new DateTime(now.Year, now.Month, now.Day, 8, 0, 0).TimeOfDay;
                 TimeSpan businessEnd = new DateTime(now.Year, now.Month, now.Day, 17, 0, 0).TimeOfDay;
                 int selectedCustomerId = Convert.ToInt32(customerComboBox.SelectedValue);
-                string selectedType = typeComboBox.SelectedValue.ToString();
+
+                string selectedType = "";
+
+                if (typeComboBox.SelectedItem != null)
+                {
+                    selectedType = typeComboBox.SelectedValue.ToString();
+                }
+
+
                 DateTime selectedStart = startDateTimePicker.Value;
                 DateTime selectedEnd = endDateTimePicker.Value;
                 bool overlapping = false;
@@ -57,6 +66,11 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
                     throw new ApplicationException("A customer must be selected.");
                 }
 
+                if (typeComboBox.SelectedItem == null)
+                {
+                    throw new ApplicationException("An appointment type must be selected");
+                }
+
                 if (selectedStart > selectedEnd)
                 {
                     throw new ApplicationException("The end time cannot be before the start time.");
@@ -67,12 +81,17 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
                     throw new ApplicationException("You cannot schedule an appointment outside of business hours, 8 am - 5 pm");
                 }
 
+                if ((selectedStart.DayOfWeek == DayOfWeek.Saturday) || (selectedStart.DayOfWeek == DayOfWeek.Sunday) || (selectedEnd.DayOfWeek == DayOfWeek.Saturday) || (selectedEnd.DayOfWeek == DayOfWeek.Sunday))
+                {
+                    throw new ApplicationException("You cannot schedule an appointment outside of business hours, Saturday and Sunday");
+                }
+
                 if (overlapping)
                 {
                     throw new ApplicationException("You cannnot overlap appointments");
                 }
 
-                if (SelectedAppointmentID >= 0)
+                if (SelectedAppointmentID >= 0 )
                 {
                     Appointment appointment = MainScreen.ListOfAppointments.Where(appt => appt.AppointmentId == SelectedAppointmentID).Single();
                     Database.updateAppointment(appointment, selectedCustomerId, selectedType, selectedStart, selectedEnd);
@@ -83,10 +102,8 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
                 }
                 Close();
             }
-            catch (NullReferenceException)
-            {
-                MessageBox.Show("You must select an appointment Type.", "Instructions", MessageBoxButtons.OK);
-            }
+
+          
             catch (ApplicationException err)
             {
                 MessageBox.Show(err.Message, "Instructions", MessageBoxButtons.OK);
