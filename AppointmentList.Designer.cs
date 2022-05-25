@@ -59,7 +59,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.comboBoxAppointmentType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxAppointmentType.FormattingEnabled = true;
-            this.comboBoxAppointmentType.Location = new System.Drawing.Point(172, 583);
+            this.comboBoxAppointmentType.Location = new System.Drawing.Point(492, 697);
             this.comboBoxAppointmentType.Name = "comboBoxAppointmentType";
             this.comboBoxAppointmentType.Size = new System.Drawing.Size(319, 28);
             this.comboBoxAppointmentType.TabIndex = 49;
@@ -69,7 +69,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.backButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backButton.Location = new System.Drawing.Point(839, 551);
+            this.backButton.Location = new System.Drawing.Point(849, 175);
             this.backButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(214, 62);
@@ -81,7 +81,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // CustomerIDtextbox
             // 
             this.CustomerIDtextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CustomerIDtextbox.Location = new System.Drawing.Point(172, 519);
+            this.CustomerIDtextbox.Location = new System.Drawing.Point(492, 656);
             this.CustomerIDtextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CustomerIDtextbox.Name = "CustomerIDtextbox";
             this.CustomerIDtextbox.Size = new System.Drawing.Size(319, 26);
@@ -103,7 +103,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.StartDateLabel.AutoSize = true;
             this.StartDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StartDateLabel.Location = new System.Drawing.Point(24, 647);
+            this.StartDateLabel.Location = new System.Drawing.Point(328, 574);
             this.StartDateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.StartDateLabel.Name = "StartDateLabel";
             this.StartDateLabel.Size = new System.Drawing.Size(83, 20);
@@ -114,7 +114,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.AppointmentTypeLabel.AutoSize = true;
             this.AppointmentTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AppointmentTypeLabel.Location = new System.Drawing.Point(24, 586);
+            this.AppointmentTypeLabel.Location = new System.Drawing.Point(328, 697);
             this.AppointmentTypeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.AppointmentTypeLabel.Name = "AppointmentTypeLabel";
             this.AppointmentTypeLabel.Size = new System.Drawing.Size(138, 20);
@@ -125,7 +125,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.CustomerIDLabel.AutoSize = true;
             this.CustomerIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CustomerIDLabel.Location = new System.Drawing.Point(24, 525);
+            this.CustomerIDLabel.Location = new System.Drawing.Point(328, 656);
             this.CustomerIDLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CustomerIDLabel.Name = "CustomerIDLabel";
             this.CustomerIDLabel.Size = new System.Drawing.Size(99, 20);
@@ -135,22 +135,22 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(549, 525);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(14, 574);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 20);
+            this.label1.Size = new System.Drawing.Size(214, 20);
             this.label1.TabIndex = 36;
-            this.label1.Text = "Choose Search Type Below";
+            this.label1.Text = "Select Search Type Here:";
             // 
             // searchButton
             // 
             this.searchButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.searchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchButton.Location = new System.Drawing.Point(553, 698);
+            this.searchButton.Location = new System.Drawing.Point(18, 747);
             this.searchButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(257, 41);
+            this.searchButton.Size = new System.Drawing.Size(220, 61);
             this.searchButton.TabIndex = 35;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = false;
@@ -160,7 +160,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.addButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addButton.Location = new System.Drawing.Point(839, 175);
+            this.addButton.Location = new System.Drawing.Point(849, 294);
             this.addButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(214, 62);
@@ -173,7 +173,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.deleteButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteButton.Location = new System.Drawing.Point(839, 425);
+            this.deleteButton.Location = new System.Drawing.Point(849, 488);
             this.deleteButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(214, 62);
@@ -186,7 +186,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.editButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.editButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editButton.Location = new System.Drawing.Point(839, 295);
+            this.editButton.Location = new System.Drawing.Point(849, 391);
             this.editButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(214, 62);
@@ -203,7 +203,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             this.appointmentDataGridView.MultiSelect = false;
             this.appointmentDataGridView.Name = "appointmentDataGridView";
             this.appointmentDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.appointmentDataGridView.Size = new System.Drawing.Size(792, 312);
+            this.appointmentDataGridView.Size = new System.Drawing.Size(792, 375);
             this.appointmentDataGridView.TabIndex = 27;
             this.appointmentDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.appointmentDataGridView_CellContentClick);
             this.appointmentDataGridView.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.appointmentDataGridView_DataBindingComplete);
@@ -212,7 +212,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.EndDateLabel.AutoSize = true;
             this.EndDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EndDateLabel.Location = new System.Drawing.Point(24, 708);
+            this.EndDateLabel.Location = new System.Drawing.Point(328, 615);
             this.EndDateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EndDateLabel.Name = "EndDateLabel";
             this.EndDateLabel.Size = new System.Drawing.Size(77, 20);
@@ -222,7 +222,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // dateTimePickerStartDate
             // 
             this.dateTimePickerStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerStartDate.Location = new System.Drawing.Point(172, 647);
+            this.dateTimePickerStartDate.Location = new System.Drawing.Point(492, 574);
             this.dateTimePickerStartDate.Name = "dateTimePickerStartDate";
             this.dateTimePickerStartDate.Size = new System.Drawing.Size(319, 26);
             this.dateTimePickerStartDate.TabIndex = 54;
@@ -232,7 +232,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.dateTimePickerEndDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerEndDate.Location = new System.Drawing.Point(172, 708);
+            this.dateTimePickerEndDate.Location = new System.Drawing.Point(492, 615);
             this.dateTimePickerEndDate.Name = "dateTimePickerEndDate";
             this.dateTimePickerEndDate.Size = new System.Drawing.Size(319, 26);
             this.dateTimePickerEndDate.TabIndex = 55;
@@ -242,7 +242,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.CustomerIDRadioButton.AutoSize = true;
             this.CustomerIDRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CustomerIDRadioButton.Location = new System.Drawing.Point(553, 570);
+            this.CustomerIDRadioButton.Location = new System.Drawing.Point(18, 657);
             this.CustomerIDRadioButton.Name = "CustomerIDRadioButton";
             this.CustomerIDRadioButton.Size = new System.Drawing.Size(117, 24);
             this.CustomerIDRadioButton.TabIndex = 56;
@@ -254,7 +254,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.AppointmentTypeRadioButton.AutoSize = true;
             this.AppointmentTypeRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AppointmentTypeRadioButton.Location = new System.Drawing.Point(553, 609);
+            this.AppointmentTypeRadioButton.Location = new System.Drawing.Point(18, 699);
             this.AppointmentTypeRadioButton.Name = "AppointmentTypeRadioButton";
             this.AppointmentTypeRadioButton.Size = new System.Drawing.Size(156, 24);
             this.AppointmentTypeRadioButton.TabIndex = 57;
@@ -266,7 +266,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.DatesRadioButton.AutoSize = true;
             this.DatesRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DatesRadioButton.Location = new System.Drawing.Point(553, 648);
+            this.DatesRadioButton.Location = new System.Drawing.Point(18, 615);
             this.DatesRadioButton.Name = "DatesRadioButton";
             this.DatesRadioButton.Size = new System.Drawing.Size(70, 24);
             this.DatesRadioButton.TabIndex = 58;

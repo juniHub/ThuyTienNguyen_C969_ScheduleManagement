@@ -129,7 +129,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             customerComboBox.ValueMember = "Key";
             customerComboBox.SelectedItem = null;
 
-            typeComboBox.DataSource = new[] { "Scrum", "Presentation", "Lunch", "Interview", "Consultation" };
+            typeComboBox.DataSource = new[] { "Scrum", "Presentation", "Lunch", "Interview", "Consultation", "In Office" };
             typeComboBox.SelectedItem = null;
 
             if (SelectedAppointmentID >= 0)

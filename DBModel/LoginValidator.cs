@@ -5,7 +5,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement.DBModel
     class LoginValidator : ApplicationException
     {
        
-        public LoginValidator(string exemptionMessage) : base(exemptionMessage)
+        public LoginValidator(string exceptionMessage) : base(exceptionMessage)
         {
 
         }

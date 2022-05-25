@@ -34,7 +34,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
    
         private void populateComboBoxAppointmentType()
         {
-            comboBoxAppointmentType.DataSource = new[] { "Scrum", "Presentation", "Lunch", "Interview", "Consultation" };
+            comboBoxAppointmentType.DataSource = new[] { "Scrum", "Presentation", "Lunch", "Interview", "Consultation", "In Office" };
             comboBoxAppointmentType.SelectedItem = null;
         }
 

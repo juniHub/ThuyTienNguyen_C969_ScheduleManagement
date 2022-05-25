@@ -107,7 +107,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.saveButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton.Location = new System.Drawing.Point(891, 176);
+            this.saveButton.Location = new System.Drawing.Point(874, 301);
             this.saveButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(214, 62);
@@ -120,7 +120,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.editButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.editButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editButton.Location = new System.Drawing.Point(891, 293);
+            this.editButton.Location = new System.Drawing.Point(874, 418);
             this.editButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(214, 62);
@@ -133,7 +133,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.cancelButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelButton.Location = new System.Drawing.Point(891, 410);
+            this.cancelButton.Location = new System.Drawing.Point(874, 535);
             this.cancelButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(214, 62);
@@ -146,7 +146,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.addButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addButton.Location = new System.Drawing.Point(891, 59);
+            this.addButton.Location = new System.Drawing.Point(874, 184);
             this.addButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(214, 62);
@@ -159,7 +159,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.deleteButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteButton.Location = new System.Drawing.Point(891, 527);
+            this.deleteButton.Location = new System.Drawing.Point(874, 652);
             this.deleteButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(214, 62);
@@ -294,7 +294,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.backButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backButton.Location = new System.Drawing.Point(891, 644);
+            this.backButton.Location = new System.Drawing.Point(874, 59);
             this.backButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(214, 62);

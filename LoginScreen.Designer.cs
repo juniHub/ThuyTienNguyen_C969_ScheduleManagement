@@ -29,6 +29,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginScreen));
             this.LoginScreenLabel = new System.Windows.Forms.Label();
             this.UnameLabel = new System.Windows.Forms.Label();
             this.PwdLabel = new System.Windows.Forms.Label();
@@ -37,13 +38,15 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             this.ExitBtn = new System.Windows.Forms.Button();
             this.UnameTextBox = new System.Windows.Forms.TextBox();
             this.PwdTextBox = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // LoginScreenLabel
             // 
             this.LoginScreenLabel.AutoSize = true;
             this.LoginScreenLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginScreenLabel.Location = new System.Drawing.Point(12, 9);
+            this.LoginScreenLabel.Location = new System.Drawing.Point(61, 18);
             this.LoginScreenLabel.Name = "LoginScreenLabel";
             this.LoginScreenLabel.Size = new System.Drawing.Size(390, 31);
             this.LoginScreenLabel.TabIndex = 0;
@@ -53,7 +56,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.UnameLabel.AutoSize = true;
             this.UnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UnameLabel.Location = new System.Drawing.Point(18, 84);
+            this.UnameLabel.Location = new System.Drawing.Point(143, 93);
             this.UnameLabel.Name = "UnameLabel";
             this.UnameLabel.Size = new System.Drawing.Size(89, 20);
             this.UnameLabel.TabIndex = 1;
@@ -63,7 +66,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.PwdLabel.AutoSize = true;
             this.PwdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PwdLabel.Location = new System.Drawing.Point(19, 166);
+            this.PwdLabel.Location = new System.Drawing.Point(144, 175);
             this.PwdLabel.Name = "PwdLabel";
             this.PwdLabel.Size = new System.Drawing.Size(86, 20);
             this.PwdLabel.TabIndex = 2;
@@ -73,7 +76,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.ErrorLabel.AutoSize = true;
             this.ErrorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ErrorLabel.Location = new System.Drawing.Point(19, 245);
+            this.ErrorLabel.Location = new System.Drawing.Point(19, 270);
             this.ErrorLabel.Name = "ErrorLabel";
             this.ErrorLabel.Size = new System.Drawing.Size(140, 20);
             this.ErrorLabel.TabIndex = 3;
@@ -83,7 +86,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.LoginBtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.LoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginBtn.Location = new System.Drawing.Point(13, 341);
+            this.LoginBtn.Location = new System.Drawing.Point(13, 358);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(175, 47);
             this.LoginBtn.TabIndex = 4;
@@ -95,7 +98,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.ExitBtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ExitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitBtn.Location = new System.Drawing.Point(289, 341);
+            this.ExitBtn.Location = new System.Drawing.Point(289, 358);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(162, 47);
             this.ExitBtn.TabIndex = 5;
@@ -106,20 +109,30 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // UnameTextBox
             // 
             this.UnameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UnameTextBox.Location = new System.Drawing.Point(18, 110);
+            this.UnameTextBox.Location = new System.Drawing.Point(143, 119);
             this.UnameTextBox.Name = "UnameTextBox";
-            this.UnameTextBox.Size = new System.Drawing.Size(304, 26);
+            this.UnameTextBox.Size = new System.Drawing.Size(214, 26);
             this.UnameTextBox.TabIndex = 6;
             this.UnameTextBox.TextChanged += new System.EventHandler(this.UnameTextBox_TextChanged);
             // 
             // PwdTextBox
             // 
             this.PwdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PwdTextBox.Location = new System.Drawing.Point(18, 195);
+            this.PwdTextBox.Location = new System.Drawing.Point(143, 204);
             this.PwdTextBox.Name = "PwdTextBox";
-            this.PwdTextBox.Size = new System.Drawing.Size(304, 26);
+            this.PwdTextBox.Size = new System.Drawing.Size(214, 26);
             this.PwdTextBox.TabIndex = 7;
             this.PwdTextBox.TextChanged += new System.EventHandler(this.PwdTextBox_TextChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(23, 93);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(105, 137);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // LoginScreen
             // 
@@ -128,7 +141,8 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(485, 422);
+            this.ClientSize = new System.Drawing.Size(485, 419);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.PwdTextBox);
             this.Controls.Add(this.UnameTextBox);
             this.Controls.Add(this.ExitBtn);
@@ -137,9 +151,11 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             this.Controls.Add(this.PwdLabel);
             this.Controls.Add(this.UnameLabel);
             this.Controls.Add(this.LoginScreenLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginScreen";
             this.Text = "LoginScreen";
             this.Load += new System.EventHandler(this.MainScreen_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,5 +171,6 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
         private System.Windows.Forms.Button ExitBtn;
         private System.Windows.Forms.TextBox UnameTextBox;
         private System.Windows.Forms.TextBox PwdTextBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
