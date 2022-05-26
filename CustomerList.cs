@@ -18,27 +18,13 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             Main = main;
         }
 
-
-        private void customerDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void customDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+       
         private void nameTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void idTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void addressTextBox_TextChanged(object sender, EventArgs e)
         {
 

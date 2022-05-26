@@ -42,12 +42,6 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             Hide();
         }
 
-        private void exitButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-            
-
         private void appointmentsButton_Click(object sender, EventArgs e)
         {
             var appointmentScreen = new AppointmentList(this);
@@ -61,8 +55,13 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             reportsScreen.Show();
             Hide();
         }
-             
 
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+            
         private void MainScreen_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();

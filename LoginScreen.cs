@@ -26,7 +26,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             UnameLabel.Text = "Tên người dùng";
             PwdLabel.Text = "Mật khẩu";
             LoginBtn.Text = "Đăng nhập";
-            ExitBtn.Text = "Đăng xuất";
+          
         }
         private void LoginBtn_Click(object sender, EventArgs e)
         {
@@ -81,6 +81,14 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
 
         }
 
+        private void AboutBtn_Click(object sender, EventArgs e)
+        {
+            var aboutScreen = new AboutScreen(this);
+
+            aboutScreen.Show();
+            Hide();
+        }
+
         private void ExitBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -107,6 +115,6 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             }
         }
 
-       
+      
     }
 }

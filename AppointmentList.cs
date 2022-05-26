@@ -244,7 +244,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             BindingList<Appointment> appointments = getAppointmentsByCustomerId(customerId);
             if (appointments.Count == 0)
             {
-                MessageBox.Show("No appointments found for customer ID");
+                MessageBox.Show("No appointment found for this customer ID");
                 return;
             }
             appointmentDataGridView.DataSource = appointments;
@@ -276,7 +276,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             BindingList<Appointment> appointments = getAppointmentsInTimePeriod(StartDate, EndDate);
             if (appointments.Count == 0)
             {
-                MessageBox.Show("No appointments found for date range provided.");
+                MessageBox.Show("No appointment found for this date time period.");
                 return;
             }
             appointmentDataGridView.DataSource = appointments;

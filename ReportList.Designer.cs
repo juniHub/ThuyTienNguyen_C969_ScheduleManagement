@@ -29,6 +29,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportList));
             this.reportLabel = new System.Windows.Forms.Label();
             this.reportTextBox = new System.Windows.Forms.TextBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -50,19 +51,18 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // reportTextBox
             // 
             this.reportTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportTextBox.Location = new System.Drawing.Point(26, 115);
+            this.reportTextBox.Location = new System.Drawing.Point(26, 145);
             this.reportTextBox.Multiline = true;
             this.reportTextBox.Name = "reportTextBox";
             this.reportTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.reportTextBox.Size = new System.Drawing.Size(686, 260);
             this.reportTextBox.TabIndex = 1;
-            this.reportTextBox.TextChanged += new System.EventHandler(this.reportTextBox_TextChanged);
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(26, 72);
+            this.radioButton1.Location = new System.Drawing.Point(26, 102);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(197, 24);
             this.radioButton1.TabIndex = 2;
@@ -75,7 +75,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(247, 72);
+            this.radioButton2.Location = new System.Drawing.Point(247, 102);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(229, 24);
             this.radioButton2.TabIndex = 3;
@@ -88,7 +88,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(508, 72);
+            this.radioButton3.Location = new System.Drawing.Point(508, 102);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(208, 24);
             this.radioButton3.TabIndex = 4;
@@ -100,12 +100,13 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // closeButton
             // 
             this.closeButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.closeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closeButton.BackgroundImage")));
+            this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeButton.Location = new System.Drawing.Point(551, 390);
+            this.closeButton.Location = new System.Drawing.Point(551, 14);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(161, 48);
             this.closeButton.TabIndex = 5;
-            this.closeButton.Text = "Back to Main";
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
@@ -116,13 +117,14 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(753, 450);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.reportTextBox);
             this.Controls.Add(this.reportLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReportList";
             this.Text = "ReportList";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ReportsForm_FormClosed);

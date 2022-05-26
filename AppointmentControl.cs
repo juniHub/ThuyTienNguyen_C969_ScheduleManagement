@@ -167,11 +167,6 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             e.Handled = true;
         }
 
-        private void ID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void customerComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 

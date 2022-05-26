@@ -29,6 +29,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerList));
             this.customerDataGridView = new System.Windows.Forms.DataGridView();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.addressTextBox = new System.Windows.Forms.TextBox();
@@ -68,8 +69,6 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             this.customerDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.customerDataGridView.Size = new System.Drawing.Size(811, 312);
             this.customerDataGridView.TabIndex = 0;
-            this.customerDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customDataGridView_CellClick);
-            this.customerDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customerDataGridView_CellContentClick);
             this.customerDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.customDataGridView_CellMouseClick);
             this.customerDataGridView.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.customDataGridView_DataBindingComplete);
             // 
@@ -268,7 +267,6 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(153, 26);
             this.idTextBox.TabIndex = 21;
-            this.idTextBox.TextChanged += new System.EventHandler(this.idTextBox_TextChanged);
             // 
             // zipTextBox
             // 
@@ -293,13 +291,14 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // backButton
             // 
             this.backButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.backButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backButton.BackgroundImage")));
+            this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.Location = new System.Drawing.Point(874, 59);
             this.backButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(214, 62);
             this.backButton.TabIndex = 24;
-            this.backButton.Text = "Back To Main";
             this.backButton.UseVisualStyleBackColor = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
@@ -358,6 +357,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.customerDataGridView);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CustomerList";
             this.Text = "CustomerList";

@@ -29,6 +29,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppointmentList));
             this.comboBoxAppointmentType = new System.Windows.Forms.ComboBox();
             this.backButton = new System.Windows.Forms.Button();
             this.CustomerIDtextbox = new System.Windows.Forms.TextBox();
@@ -68,13 +69,14 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // backButton
             // 
             this.backButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.backButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backButton.BackgroundImage")));
+            this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.backButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.Location = new System.Drawing.Point(849, 175);
             this.backButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(214, 62);
             this.backButton.TabIndex = 48;
-            this.backButton.Text = "Back To Main";
             this.backButton.UseVisualStyleBackColor = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
@@ -146,13 +148,16 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // searchButton
             // 
             this.searchButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.searchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchButton.Location = new System.Drawing.Point(18, 747);
+            this.searchButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("searchButton.BackgroundImage")));
+            this.searchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.searchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchButton.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.searchButton.Location = new System.Drawing.Point(849, 664);
             this.searchButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(220, 61);
+            this.searchButton.Size = new System.Drawing.Size(214, 61);
             this.searchButton.TabIndex = 35;
-            this.searchButton.Text = "Search";
+            this.searchButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.searchButton.UseVisualStyleBackColor = false;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
@@ -354,6 +359,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.appointmentDataGridView);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AppointmentList";
             this.Text = "AppointmentList";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AppointmentsForm_FormClosed);

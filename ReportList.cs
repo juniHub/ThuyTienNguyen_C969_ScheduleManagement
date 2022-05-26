@@ -30,7 +30,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             {
                 var text = new StringBuilder();
                 text.AppendLine("Number of Appointment Types by Month:");
-                text.AppendLine("------------------------------------");
+                text.AppendLine("-------------------------------------------------------------------");
                
 
                 var groupedByMonthList = MainScreen.ListOfAppointments
@@ -61,9 +61,9 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             {
                 var text = new StringBuilder();
                 text.AppendLine("The Schedule for Each Consultant:");
-                text.AppendLine("------------------------------------");
+                text.AppendLine("-------------------------------------------------------------------");
 
-              
+
                 var groupedByConsultantList = MainScreen.ListOfAppointments
                 .GroupBy(appt => appt.UserId);
 
@@ -75,7 +75,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
                         text.AppendLine($"{MainScreen.ListOfCustomers.Where(customer => customer.CustomerId == appt.CustomerId).Single().CustomerName}:");
                         text.AppendLine($"\t{appt.Start.ToString("dddd M/d/yyyy h:mm tt")}.");
                     }
-                    text.AppendLine("------------------------------------");
+                    text.AppendLine("-------------------------------------------------------------------");
                 }
 
                 reportTextBox.Text = text.ToString();
@@ -88,7 +88,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             {
                 var text = new StringBuilder();
                 text.AppendLine("Customers with Appointments This Month:");
-                text.AppendLine("------------------------------------");
+                text.AppendLine("-------------------------------------------------------------------");
 
 
                 DateTime beginningOfMonth = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
@@ -102,8 +102,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
                     text.AppendLine($"Name:\t{MainScreen.ListOfCustomers.Where(customer => customer.CustomerId == appt.Key).Single().CustomerName}");
                     text.AppendLine($"Phone:\t{MainScreen.AddressDictionary[appt.Key].Phone}");
 
-                 
-                    text.AppendLine("------------------------------------");
+                    text.AppendLine("-------------------------------------------------------------------");
                 }
 
                 reportTextBox.Text = text.ToString();
@@ -122,10 +121,5 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
         }
 
 
-      
-        private void reportTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

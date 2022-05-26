@@ -29,6 +29,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppointmentControl));
             this.titleLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -102,7 +103,6 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(277, 26);
             this.idTextBox.TabIndex = 6;
-            this.idTextBox.TextChanged += new System.EventHandler(this.ID_TextChanged);
             // 
             // label5
             // 
@@ -199,6 +199,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.titleLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AppointmentControl";
             this.Text = "AppointmentControl";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AppointmentAddEditForm_FormClosed);

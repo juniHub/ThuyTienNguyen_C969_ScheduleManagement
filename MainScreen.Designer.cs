@@ -79,12 +79,13 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // exitButton
             // 
             this.exitButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.exitButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exitButton.BackgroundImage")));
+            this.exitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitButton.Location = new System.Drawing.Point(385, 361);
+            this.exitButton.Location = new System.Drawing.Point(385, 354);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(176, 55);
             this.exitButton.TabIndex = 3;
-            this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
