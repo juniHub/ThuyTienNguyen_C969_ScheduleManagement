@@ -19,9 +19,9 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             Main = form;
         }
 
-        private void closeButton_Click(object sender, EventArgs e)
+        private void ReportsForm_Load(object sender, EventArgs e)
         {
-            this.Close();
+            ListOfUsers = Database.getAllUsers();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
                
 
                 var groupedByMonthList = MainScreen.ListOfAppointments
-                    // The following three lines contain Lambda expessions that order appointments, determine if appointments meet certain conditions, and group appointments to create a new list of appointments.
+                    // The following two lines contain Lambda expessions that order appointments, and group appointments to create a new list of appointments.
                  
                     .OrderBy(appt => appt.Start)
                     .GroupBy(appt => appt.Start.ToString("MMMM yyyy"));
@@ -109,16 +109,17 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             }
         }
 
-   
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void ReportsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Main.Show();
         }
 
-        private void ReportsForm_Load(object sender, EventArgs e)
-        {
-            ListOfUsers = Database.getAllUsers();
-        }
 
 
     }

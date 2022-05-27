@@ -86,6 +86,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
                     throw new ApplicationException("You cannot schedule an appointment outside of business hours, Saturday and Sunday");
                 }
 
+
                 if (overlapping)
                 {
                     throw new ApplicationException("You cannnot overlap appointments");

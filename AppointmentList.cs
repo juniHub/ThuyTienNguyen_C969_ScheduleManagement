@@ -204,8 +204,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
         private void DateRadioButton_CheckedChanged(object sender, EventArgs e)
         {
 
-            CustomerIDLabel.Visible = false;
-            AppointmentTypeLabel.Visible = false;
+            
             CustomerIDtextbox.Visible = false;
             comboBoxAppointmentType.Visible = false;
             StartDateLabel.Visible = true;
@@ -256,7 +255,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             BindingList<Appointment> appointments = getAppointmentsByAppointmentType(comboBoxAppointmentType.Text);
             if (appointments.Count == 0)
             {
-                MessageBox.Show("You have no appointments for selected type.");
+                MessageBox.Show("You have no appointment for selected type.");
                 return;
             }
             appointmentDataGridView.DataSource = appointments;
@@ -285,8 +284,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
         private void CustomerIDRadioButton_CheckedChanged(object sender, EventArgs e)
         {
 
-            CustomerIDLabel.Visible = true;
-            AppointmentTypeLabel.Visible = false;
+          
             CustomerIDtextbox.Visible = true;
             comboBoxAppointmentType.Visible = false;
             StartDateLabel.Visible = false;
@@ -298,8 +296,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
         private void AppointmentTypeRadioButton_CheckedChanged(object sender, EventArgs e)
         {
 
-            CustomerIDLabel.Visible = false;
-            AppointmentTypeLabel.Visible = true;
+           
             CustomerIDtextbox.Visible = false;
             comboBoxAppointmentType.Visible = true;
             StartDateLabel.Visible = false;
@@ -328,12 +325,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
 
         }
 
-        private void appointmentDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-
+   
         private void radioButtonAllAppts_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButtonAllAppts.Checked)

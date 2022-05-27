@@ -112,6 +112,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             this.Controls.Add(this.reportsButton);
             this.Controls.Add(this.appointmentButton);
             this.Controls.Add(this.customersButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainScreen";
             this.Text = "MainScreen";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainScreen_FormClosed);
