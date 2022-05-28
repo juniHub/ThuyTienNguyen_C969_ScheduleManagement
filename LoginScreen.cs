@@ -19,7 +19,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             InitializeComponent();
         }
 
-
+        
         private void changeLoginToVietnamese()
         {
             LoginScreenLabel.Text = "Chào mừng bạn đến với lịch hẹn thông minh";
@@ -68,6 +68,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
                     throw new LoginValidator("The password is incorrect");
                 }
 
+               //print out user activity logs
                UserActivityLog.logActivity(signedInUser[0]);
 
                 var mainScreen = new MainScreen(signedInUser[0]);

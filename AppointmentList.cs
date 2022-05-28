@@ -12,7 +12,6 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
     {
         private Form Main;
         private DateTime SelectedDate;
-      
 
         public AppointmentList(Form main)
         {
@@ -31,11 +30,39 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
 
         }
 
-   
         private void populateComboBoxAppointmentType()
         {
             comboBoxAppointmentType.DataSource = new[] { "Scrum", "Presentation", "Lunch", "Interview", "Consultation", "In Office" };
             comboBoxAppointmentType.SelectedItem = null;
+        }
+
+        private void radioButtonAllAppts_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonAllAppts.Checked)
+            {
+                apptLabel.Text = "All Appointments";
+                displayAllAppts();
+
+            }
+        }
+
+        private void radioButtonMonthlyView_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonMonthlyView.Checked)
+            {
+                apptLabel.Text = "Appointments This Month";
+                displayThisMonth();
+
+            }
+        }
+        private void radioButtonWeeklyView_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonWeeklyView.Checked)
+            {
+                apptLabel.Text = "Appointments This Week";
+                displayThisWeek();
+
+            }
         }
 
         private void displayAllAppts()
@@ -50,7 +77,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             appointmentDataGridView.DataSource = getAppointmentsInTimePeriod(dateTimePickerStartDate.Value, dateTimePickerEndDate.Value);
         }
 
-      
+
         private void displayThisWeek()
         {
             dateTimePickerStartDate.Value = findBeginningOfWeek(DateTime.Now);
@@ -58,12 +85,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             appointmentDataGridView.DataSource = getAppointmentsInTimePeriod(dateTimePickerStartDate.Value, dateTimePickerEndDate.Value);
         }
 
-        
 
-        private void AppointmentsForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Main.Show();
-        }
 
         private void formatDataGridView()
         {
@@ -152,8 +174,14 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Close();
+            
+        }
+
+        private void AppointmentsForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
             Main.Show();
         }
+        
 
 
         private DateTime findBeginningOfWeek(DateTime date)
@@ -184,7 +212,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
 
         private BindingList<Appointment> getAppointmentsInTimePeriod(DateTime beginTime, DateTime endTime)
         {
-            //used the following lambda in linq statement to recreate list of Appointments that fall within the begin and end time bounds.
+            //The following Lambda used here to create list of appointments that are in range of selected time period.
             return new BindingList<Appointment>(MainScreen.ListOfAppointments.Where(appt => appt.Start >= beginTime && appt.End <= endTime).ToList());
         }
 
@@ -199,12 +227,11 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             return new BindingList<Appointment>(MainScreen.ListOfAppointments.Where(appt => appt.Type == type).ToList());
         }
 
-          
 
         private void DateRadioButton_CheckedChanged(object sender, EventArgs e)
         {
 
-            
+
             CustomerIDtextbox.Visible = false;
             comboBoxAppointmentType.Visible = false;
             StartDateLabel.Visible = true;
@@ -212,6 +239,31 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             dateTimePickerStartDate.Visible = true;
             dateTimePickerEndDate.Visible = true;
         }
+
+        private void CustomerIDRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+
+
+            CustomerIDtextbox.Visible = true;
+            comboBoxAppointmentType.Visible = false;
+            StartDateLabel.Visible = false;
+            EndDateLabel.Visible = false;
+            dateTimePickerStartDate.Visible = false;
+            dateTimePickerEndDate.Visible = false;
+        }
+
+        private void AppointmentTypeRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+
+
+            CustomerIDtextbox.Visible = false;
+            comboBoxAppointmentType.Visible = true;
+            StartDateLabel.Visible = false;
+            EndDateLabel.Visible = false;
+            dateTimePickerStartDate.Visible = false;
+            dateTimePickerEndDate.Visible = false;
+        }
+
 
         private void searchButton_Click(object sender, EventArgs e)
         {
@@ -281,29 +333,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             appointmentDataGridView.DataSource = appointments;
         }
 
-        private void CustomerIDRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
 
-          
-            CustomerIDtextbox.Visible = true;
-            comboBoxAppointmentType.Visible = false;
-            StartDateLabel.Visible = false;
-            EndDateLabel.Visible = false;
-            dateTimePickerStartDate.Visible = false;
-            dateTimePickerEndDate.Visible = false;
-        }
-
-        private void AppointmentTypeRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-
-           
-            CustomerIDtextbox.Visible = false;
-            comboBoxAppointmentType.Visible = true;
-            StartDateLabel.Visible = false;
-            EndDateLabel.Visible = false;
-            dateTimePickerStartDate.Visible = false;
-            dateTimePickerEndDate.Visible = false;
-        }
 
         private void CustomerID_TextChanged(object sender, EventArgs e)
         {
@@ -325,34 +355,6 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
 
         }
 
-   
-        private void radioButtonAllAppts_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButtonAllAppts.Checked)
-            {
-                apptLabel.Text = "All Appointments";
-                displayAllAppts();
-
-            }
-        }
-
-        private void radioButtonMonthlyView_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButtonMonthlyView.Checked)
-            {
-                apptLabel.Text = "Appointments This Month";
-                displayThisMonth();
-
-            }
-        }
-        private void radioButtonWeeklyView_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButtonWeeklyView.Checked)
-            {
-                apptLabel.Text = "Appointments This Week";
-                displayThisWeek();
-
-            }
-        }
     }
+       
 }

@@ -17,7 +17,6 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
         public static Dictionary<int, City> CityDictionary = new Dictionary<int, City>();
         public static Dictionary<int, Country> CountryDictionary = new Dictionary<int, Country>();
 
-
         public MainScreen(User user)
         {
             InitializeComponent();
@@ -56,7 +55,6 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             Hide();
         }
 
-
         private void exitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -67,6 +65,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             Application.Exit();
         }
 
+        //a notice will be shown in window form for the users if they have apppointments within 15 minutes
         private void MainScreen_Shown(object sender, EventArgs e)
         {
             var apptInFifteenMinutes = ListOfAppointments.Where(appt =>
@@ -86,9 +85,8 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             if (apptInFifteenMinutes.Count() > 0)
             {
                var appointment = apptInFifteenMinutes.First();
-                //The Lambda Expession used in the line below is used to determine a single customer in a list that is equivalent to a particular customer id.
-           
-              MessageBox.Show($"You have an appointment with {ListOfCustomers.Where(cust => cust.CustomerId == appointment.CustomerId).Single().CustomerName} at {appointment.Start.ToString("h:mm tt")}.", "Upcoming Appointment", MessageBoxButtons.OK);
+               
+               MessageBox.Show($"You have an appointment with {ListOfCustomers.Where(cust => cust.CustomerId == appointment.CustomerId).Single().CustomerName} at {appointment.Start.ToString("h:mm tt")}.", "Upcoming Appointment", MessageBoxButtons.OK);
             }
         }
     }

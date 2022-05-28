@@ -7,6 +7,8 @@ namespace ThuyTienNguyen_C969_ScheduleManagement.DBModel
     public class DBConnection
     {
         public static MySqlConnection conn { get;  set; }
+
+        //start connection to database
         public static void startConnection()
         {
             try
@@ -26,6 +28,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement.DBModel
           
         }
 
+        //close connection from database
         public static void closeConnection()
         {  
             try { 

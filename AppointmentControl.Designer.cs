@@ -59,17 +59,17 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 91);
+            this.label2.Location = new System.Drawing.Point(23, 83);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 20);
+            this.label2.Size = new System.Drawing.Size(121, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "ID";
+            this.label2.Text = "Appointment ID";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(23, 141);
+            this.label3.Location = new System.Drawing.Point(23, 137);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 20);
             this.label3.TabIndex = 2;
@@ -79,7 +79,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(23, 191);
+            this.label4.Location = new System.Drawing.Point(23, 187);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 20);
             this.label4.TabIndex = 3;
@@ -89,7 +89,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(23, 291);
+            this.label6.Location = new System.Drawing.Point(23, 287);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 20);
             this.label6.TabIndex = 5;
@@ -99,7 +99,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.idTextBox.Enabled = false;
             this.idTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idTextBox.Location = new System.Drawing.Point(134, 91);
+            this.idTextBox.Location = new System.Drawing.Point(150, 83);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(277, 26);
             this.idTextBox.TabIndex = 6;
@@ -108,7 +108,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(23, 241);
+            this.label5.Location = new System.Drawing.Point(23, 237);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 20);
             this.label5.TabIndex = 7;
@@ -118,7 +118,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.customerComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customerComboBox.FormattingEnabled = true;
-            this.customerComboBox.Location = new System.Drawing.Point(134, 140);
+            this.customerComboBox.Location = new System.Drawing.Point(150, 132);
             this.customerComboBox.Name = "customerComboBox";
             this.customerComboBox.Size = new System.Drawing.Size(277, 28);
             this.customerComboBox.TabIndex = 8;
@@ -129,7 +129,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.typeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.typeComboBox.FormattingEnabled = true;
-            this.typeComboBox.Location = new System.Drawing.Point(134, 191);
+            this.typeComboBox.Location = new System.Drawing.Point(150, 183);
             this.typeComboBox.Name = "typeComboBox";
             this.typeComboBox.Size = new System.Drawing.Size(277, 28);
             this.typeComboBox.TabIndex = 9;
@@ -139,7 +139,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // startDateTimePicker
             // 
             this.startDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.startDateTimePicker.Location = new System.Drawing.Point(134, 242);
+            this.startDateTimePicker.Location = new System.Drawing.Point(150, 234);
             this.startDateTimePicker.Name = "startDateTimePicker";
             this.startDateTimePicker.Size = new System.Drawing.Size(277, 26);
             this.startDateTimePicker.TabIndex = 10;
@@ -148,7 +148,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // endDateTimePicker
             // 
             this.endDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.endDateTimePicker.Location = new System.Drawing.Point(134, 291);
+            this.endDateTimePicker.Location = new System.Drawing.Point(150, 283);
             this.endDateTimePicker.Name = "endDateTimePicker";
             this.endDateTimePicker.Size = new System.Drawing.Size(277, 26);
             this.endDateTimePicker.TabIndex = 11;
@@ -158,7 +158,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.saveButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton.Location = new System.Drawing.Point(134, 361);
+            this.saveButton.Location = new System.Drawing.Point(150, 353);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(85, 40);
             this.saveButton.TabIndex = 12;
@@ -170,7 +170,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             this.cancelButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelButton.Location = new System.Drawing.Point(317, 361);
+            this.cancelButton.Location = new System.Drawing.Point(333, 353);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(94, 40);
             this.cancelButton.TabIndex = 13;

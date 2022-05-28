@@ -88,7 +88,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
 
                 if (zipTextBox.Text == "")
                 {
-                    throw new ApplicationException("A customer must have a zip code.");
+                    throw new ApplicationException("A customer must have a zipcode.");
                 }
 
                 if (phoneTextBox.Text == "")
@@ -108,7 +108,6 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
                     throw new ApplicationException("Phone must be a number");
 
                 }
-
 
 
                 string customerName = nameTextBox.Text;
@@ -229,11 +228,6 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             }
         }
 
-        private void backButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void CustomerRecords_Load(object sender, EventArgs e)
         {
             mainLabel.Text = "Customer Records";
@@ -242,8 +236,8 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             countryComboBox.DisplayMember = "Value";
             countryComboBox.ValueMember = "Key";
             countryComboBox.SelectedItem = null;
+            
             // Using Lambda in Linq statement below to construct a new dictionary that holds "string" as a value rather than the City object
-        
             Dictionary<int, string> cityNameDictionary = MainScreen.CityDictionary.ToDictionary(dict => dict.Key, dict => dict.Value.CityName);
             cityComboBox.DataSource = new BindingSource(cityNameDictionary, null);
             cityComboBox.DisplayMember = "Value";
@@ -251,10 +245,6 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             cityComboBox.SelectedItem = null;
         }
 
-        private void CustomerRecords_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Main.Show();
-        }
 
         private void customDataGridView_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
@@ -284,7 +274,6 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             countryComboBox.Text = "";
         }
 
-
         private void ToggleActiveInputs(bool active)
         {
             nameTextBox.Enabled = active;
@@ -302,8 +291,6 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             backButton.Visible = !active;
             customerDataGridView.Enabled = !active;
         }
-
-     
 
         private void customDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -353,6 +340,16 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
         private void cityComboBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void CustomerRecords_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Main.Show();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

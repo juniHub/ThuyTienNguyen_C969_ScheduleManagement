@@ -34,7 +34,8 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
                
 
                 var groupedByMonthList = MainScreen.ListOfAppointments
-                    // The following two lines contain Lambda expessions that order appointments, and group appointments to create a new list of appointments.
+
+                    // The following two lines contain Lambda expessions that make appointments in order, and group appointments to create a new list of appointments.
                  
                     .OrderBy(appt => appt.Start)
                     .GroupBy(appt => appt.Start.ToString("MMMM yyyy"));

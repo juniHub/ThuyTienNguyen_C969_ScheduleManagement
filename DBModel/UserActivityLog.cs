@@ -27,17 +27,17 @@ namespace ThuyTienNguyen_C969_ScheduleManagement.DBModel
             {
                 FileStream output = new FileStream(fileName, FileMode.Create);
                 StreamWriter fileWriter = new StreamWriter(output);
-                string currentLog = $"The user \"{user.UserName}\" logged in on {DateTime.Now.ToUniversalTime()} (UTC).";
+                string currentLine = $"The user \"{user.UserName}\" logged in on {DateTime.Now.ToUniversalTime()} (UTC).";
 
                 if (fileDoesNotExists)
                 {
-                    fileWriter.WriteLine(currentLog);
+                    fileWriter.WriteLine(currentLine);
                     fileWriter.Close();
                 }
                 else
                 {
                     fileWriter.WriteLine(previousLine);
-                    fileWriter.WriteLine(currentLog);
+                    fileWriter.WriteLine(currentLine);
                     fileWriter.Close();
                 }
             }

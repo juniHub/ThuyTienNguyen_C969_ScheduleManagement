@@ -8,7 +8,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement.DBModel
     class Database
     {
 
-       
+       //get all users from database
         public static List<User> getAllUsers()
         {
             List<User> listOfUsers = new List<User>();
@@ -41,12 +41,43 @@ namespace ThuyTienNguyen_C969_ScheduleManagement.DBModel
             return listOfUsers;
         }
 
+
+        //get all customers from database
+        public static void getCustomers()
+        {
+            string query = "SELECT * FROM customer";
+
+
+            DBConnection.startConnection();
+
+            MySqlCommand cmd = new MySqlCommand(query, DBConnection.conn);
+            MySqlDataReader dataReader = cmd.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                int customerID = Convert.ToInt32(dataReader[0]);
+                string customerName = dataReader[1].ToString();
+                int addressID = Convert.ToInt32(dataReader[2]);
+                int active = Convert.ToInt32(dataReader[3]);
+                DateTime createDate = Convert.ToDateTime(dataReader[4]).ToLocalTime();
+                string createdBy = dataReader[5].ToString();
+                DateTime lastUpdate = Convert.ToDateTime(dataReader[6]).ToLocalTime();
+                string lastUpdateBy = dataReader[7].ToString();
+
+                MainScreen.ListOfCustomers.Add(new Customer(customerID, customerName, addressID, active, createDate, createdBy, lastUpdate, lastUpdateBy));
+            }
+
+
+            DBConnection.closeConnection();
+        }
+
+        //get all appointments from database
         public static void getAppointments()
         {
+            
             string query = $"select * from appointment WHERE userId={MainScreen.LoggedInUser.UserID}";
-
          
-           DBConnection.startConnection();
+            DBConnection.startConnection();
 
             MySqlCommand cmd = new MySqlCommand(query, DBConnection.conn);
             MySqlDataReader dataReader = cmd.ExecuteReader();
@@ -69,6 +100,9 @@ namespace ThuyTienNguyen_C969_ScheduleManagement.DBModel
 
            DBConnection.closeConnection();
         }
+
+
+        /***********ADD, DELETE and UPDATE an appointment ***************/
 
         public static void addAppointment(int customerId, string type, DateTime start, DateTime end)
         {
@@ -123,11 +157,12 @@ namespace ThuyTienNguyen_C969_ScheduleManagement.DBModel
             MainScreen.ListOfAppointments.Insert(indexOfAppointmentList, updatedAppointment);
         }
 
-        public static void getCustomers()
-        {
-            string query = "select * from customer";
 
-            
+        public static void getAddresses()
+        {
+            string query = "select * from address";
+
+
             DBConnection.startConnection();
 
             MySqlCommand cmd = new MySqlCommand(query, DBConnection.conn);
@@ -135,21 +170,81 @@ namespace ThuyTienNguyen_C969_ScheduleManagement.DBModel
 
             while (dataReader.Read())
             {
-                int customerID = Convert.ToInt32(dataReader[0]);
-                string customerName = dataReader[1].ToString();
-                int addressID = Convert.ToInt32(dataReader[2]);
-                int active = Convert.ToInt32(dataReader[3]);
-                DateTime createDate = Convert.ToDateTime(dataReader[4]).ToLocalTime();
-                string createdBy = dataReader[5].ToString();
-                DateTime lastUpdate = Convert.ToDateTime(dataReader[6]).ToLocalTime();
-                string lastUpdateBy = dataReader[7].ToString();
+                int addressID = Convert.ToInt32(dataReader[0]);
+                string address1 = dataReader[1].ToString();
+                string address2 = dataReader[2].ToString();
+                int cityID = Convert.ToInt32(dataReader[3]);
+                string postalCode = dataReader[4].ToString();
+                string phone = dataReader[5].ToString();
+                DateTime createDate = Convert.ToDateTime(dataReader[6]).ToLocalTime();
+                string createdBy = dataReader[7].ToString();
+                DateTime lastUpdate = Convert.ToDateTime(dataReader[8]).ToLocalTime();
+                string lastUpdateBy = dataReader[9].ToString();
 
-                MainScreen.ListOfCustomers.Add(new Customer(customerID, customerName, addressID, active, createDate, createdBy, lastUpdate, lastUpdateBy));
+                MainScreen.AddressDictionary.Add(addressID, new Address(addressID, address1, address2, cityID, postalCode, phone, createDate, createdBy, lastUpdate, lastUpdateBy));
             }
 
-           
+
             DBConnection.closeConnection();
         }
+
+        //get all cities from database
+        public static void getCities()
+        {
+            string query = "select * from city";
+
+
+            DBConnection.startConnection();
+
+            MySqlCommand cmd = new MySqlCommand(query, DBConnection.conn);
+            MySqlDataReader dataReader = cmd.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                int cityID = Convert.ToInt32(dataReader[0]);
+                string city = dataReader[1].ToString();
+                int countryID = Convert.ToInt32(dataReader[2]);
+                DateTime createDate = Convert.ToDateTime(dataReader[3]).ToLocalTime();
+                string createdBy = dataReader[4].ToString();
+                DateTime lastUpdate = Convert.ToDateTime(dataReader[5]).ToLocalTime();
+                string lastUpdateBy = dataReader[6].ToString();
+
+                MainScreen.CityDictionary.Add(cityID, new City(cityID, city, countryID, createDate, createdBy, lastUpdate, lastUpdateBy));
+            }
+
+
+            DBConnection.closeConnection();
+        }
+
+        //get all countries from database
+        public static void getCountries()
+        {
+            string query = "select * from country";
+
+
+            DBConnection.startConnection();
+
+            MySqlCommand cmd = new MySqlCommand(query, DBConnection.conn);
+            MySqlDataReader dataReader = cmd.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                int countryID = Convert.ToInt32(dataReader[0]);
+                string country = dataReader[1].ToString();
+                DateTime createDate = Convert.ToDateTime(dataReader[2]).ToLocalTime();
+                string createdBy = dataReader[3].ToString();
+                DateTime lastUpdate = Convert.ToDateTime(dataReader[4]).ToLocalTime();
+                string lastUpdateBy = dataReader[5].ToString();
+
+                MainScreen.CountryDictionary.Add(countryID, new Country(countryID, country, createDate, createdBy, lastUpdate, lastUpdateBy));
+            }
+
+
+            DBConnection.closeConnection();
+        }
+
+
+        /***********ADD, DELETE and UPDATE a customer ***************/
 
         public static int addCustomer(string customerName, int addressID, string user)
         {
@@ -209,35 +304,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement.DBModel
         }
 
 
-        public static void getAddresses()
-        {
-            string query = "select * from address";
-
-          
-            DBConnection.startConnection();
-
-            MySqlCommand cmd = new MySqlCommand(query, DBConnection.conn);
-            MySqlDataReader dataReader = cmd.ExecuteReader();
-
-            while (dataReader.Read())
-            {
-                int addressID = Convert.ToInt32(dataReader[0]);
-                string address1 = dataReader[1].ToString();
-                string address2 = dataReader[2].ToString();
-                int cityID = Convert.ToInt32(dataReader[3]);
-                string postalCode = dataReader[4].ToString();
-                string phone = dataReader[5].ToString();
-                DateTime createDate = Convert.ToDateTime(dataReader[6]).ToLocalTime();
-                string createdBy = dataReader[7].ToString();
-                DateTime lastUpdate = Convert.ToDateTime(dataReader[8]).ToLocalTime();
-                string lastUpdateBy = dataReader[9].ToString();
-
-                MainScreen.AddressDictionary.Add(addressID, new Address(addressID, address1, address2, cityID, postalCode, phone, createDate, createdBy, lastUpdate, lastUpdateBy));
-            }
-
-        
-            DBConnection.closeConnection();
-        }
+        /***********ADD, DELETE and UPDATE an address ***************/
 
         public static int addAddress(string address1, string address2, int cityId, string postalCode, string phone, string userName)
         {
@@ -291,58 +358,6 @@ namespace ThuyTienNguyen_C969_ScheduleManagement.DBModel
 
             MainScreen.AddressDictionary[address.AddressId] = new Address(address.AddressId, address1, address2, cityId, postalCode, phone, address.CreateDate, address.CreatedBy, now, user);
         }
-
-        public static void getCities()
-        {
-            string query = "select * from city";
-
-          
-            DBConnection.startConnection();
-
-            MySqlCommand cmd = new MySqlCommand(query, DBConnection.conn);
-            MySqlDataReader dataReader = cmd.ExecuteReader();
-
-            while (dataReader.Read())
-            {
-                int cityID = Convert.ToInt32(dataReader[0]);
-                string city = dataReader[1].ToString();
-                int countryID = Convert.ToInt32(dataReader[2]);
-                DateTime createDate = Convert.ToDateTime(dataReader[3]).ToLocalTime();
-                string createdBy = dataReader[4].ToString();
-                DateTime lastUpdate = Convert.ToDateTime(dataReader[5]).ToLocalTime();
-                string lastUpdateBy = dataReader[6].ToString();
-
-                MainScreen.CityDictionary.Add(cityID, new City(cityID, city, countryID, createDate, createdBy, lastUpdate, lastUpdateBy));
-            }
-
-         
-            DBConnection.closeConnection();
-        }
-
-        public static void getCountries()
-        {
-            string query = "select * from country";
-
-          
-            DBConnection.startConnection();
-
-            MySqlCommand cmd = new MySqlCommand(query, DBConnection.conn);
-            MySqlDataReader dataReader = cmd.ExecuteReader();
-
-            while (dataReader.Read())
-            {
-                int countryID = Convert.ToInt32(dataReader[0]);
-                string country = dataReader[1].ToString();
-                DateTime createDate = Convert.ToDateTime(dataReader[2]).ToLocalTime();
-                string createdBy = dataReader[3].ToString();
-                DateTime lastUpdate = Convert.ToDateTime(dataReader[4]).ToLocalTime();
-                string lastUpdateBy = dataReader[5].ToString();
-
-                MainScreen.CountryDictionary.Add(countryID, new Country(countryID, country, createDate, createdBy, lastUpdate, lastUpdateBy));
-            }
-
-         
-            DBConnection.closeConnection();
-        }
+       
     }
 }
