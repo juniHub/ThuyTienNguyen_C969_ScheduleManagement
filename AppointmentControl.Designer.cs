@@ -138,7 +138,9 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             // startDateTimePicker
             // 
+            this.startDateTimePicker.CustomFormat = "MM/dd/yyyy hh:mm tt";
             this.startDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.startDateTimePicker.Location = new System.Drawing.Point(150, 234);
             this.startDateTimePicker.Name = "startDateTimePicker";
             this.startDateTimePicker.Size = new System.Drawing.Size(277, 26);
@@ -147,7 +149,9 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             // 
             // endDateTimePicker
             // 
+            this.endDateTimePicker.CustomFormat = "MM/dd/yyyy hh:mm tt";
             this.endDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.endDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.endDateTimePicker.Location = new System.Drawing.Point(150, 283);
             this.endDateTimePicker.Name = "endDateTimePicker";
             this.endDateTimePicker.Size = new System.Drawing.Size(277, 26);
