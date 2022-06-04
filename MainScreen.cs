@@ -86,7 +86,7 @@ namespace ThuyTienNguyen_C969_ScheduleManagement
             {
                var appointment = apptInFifteenMinutes.First();
                
-               MessageBox.Show($"You have an appointment with {ListOfCustomers.Where(cust => cust.CustomerId == appointment.CustomerId).Single().CustomerName} at {appointment.Start.ToString("h:mm tt")}.", "Upcoming Appointment", MessageBoxButtons.OK);
+               MessageBox.Show($"You have an appointment with {ListOfCustomers.Where(cust => cust.CustomerId == appointment.CustomerId).Single().CustomerName} at {appointment.Start.ToString("hh:mm tt")}.", "Upcoming Appointment", MessageBoxButtons.OK);
             }
         }
     }
